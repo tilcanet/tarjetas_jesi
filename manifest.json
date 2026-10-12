@@ -2,23 +2,30 @@
   "name": "Mixturas Tilcara - Costura & Tapicería",
   "short_name": "Mixturas",
   "description": "Tarjeta comercial digital y contacto directo de Mixturas Tilcara. Arreglos de costura en general y tapicería en Tilcara, Jujuy.",
+  "id": "/",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f7fbfe",
-  "theme_color": "#58a9e0",
+  "theme_color": "#68b4e7",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "icon.svg",
-      "sizes": "192x192 512x512 any",
-      "type": "image/svg+xml",
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "qr what.jpg",
-      "sizes": "256x256",
-      "type": "image/jpeg",
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "any"
     }
   ]

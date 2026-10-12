@@ -12,6 +12,8 @@ const ASSETS_TO_CACHE = [
   './script.js?v=2',
   './trabajadores.js',
   './manifest.json',
+  './icon-192.png',
+  './icon-512.png',
   './icon.svg',
   './logo_jesi.jpg',
   './qr what.jpg',
