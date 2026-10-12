@@ -2,14 +2,18 @@
  * Service Worker para Mixturas Tilcara PWA
  * Permite el funcionamiento sin conexión y habilita la instalación de acceso directo en celulares
  */
-const CACHE_NAME = 'mixturas-tilcara-v1';
+const CACHE_NAME = 'mixturas-tilcara-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './trabajadores.html',
   './style.css',
+  './trabajadores.css',
   './script.js',
+  './trabajadores.js',
   './manifest.json',
   './icon.svg',
+  './logo_jesi.jpg',
   './qr what.jpg',
   './contacto-mixturas-tilcara.vcf'
 ];
