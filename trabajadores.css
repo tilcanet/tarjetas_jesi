@@ -1,0 +1,355 @@
+/* ==========================================================================
+   MIXTURAS TILCARA - PANTALLA PARA TRABAJADORES (MOSTRADOR / QR CLIENTES)
+   ========================================================================== */
+
+.staff-page-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-header {
+    padding: 16px 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(88, 169, 224, 0.1);
+}
+
+.back-link:hover {
+    color: var(--primary-blue-dark);
+    border-color: var(--primary-blue);
+    transform: translateX(-3px);
+}
+
+.staff-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(88, 169, 224, 0.35);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.staff-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25);
+    animation: pulseStaff 2s infinite;
+}
+
+@keyframes pulseStaff {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* ==========================================================================
+   TARJETA CENTRAL DE MOSTRADOR
+   ========================================================================== */
+.staff-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px 0 40px;
+}
+
+.staff-container {
+    max-width: 620px;
+}
+
+.staff-display-card {
+    background: #ffffff;
+    border-radius: 28px;
+    border: 1.5px solid rgba(88, 169, 224, 0.35);
+    box-shadow: 0 25px 55px -10px rgba(59, 141, 199, 0.28);
+    padding: 34px 28px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Encabezado */
+.staff-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.staff-mascot {
+    width: 85px;
+    height: 90px;
+    margin-bottom: 6px;
+    filter: drop-shadow(0 4px 10px rgba(88, 169, 224, 0.2));
+}
+
+.staff-brand-title {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.1;
+}
+
+.staff-brand-title span {
+    color: var(--primary-blue);
+}
+
+.staff-brand-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   CÓDIGO QR GIGANTE
+   ========================================================================== */
+.staff-qr-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 24px;
+}
+
+.staff-qr-wrapper {
+    position: relative;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(88, 169, 224, 0.25);
+    border: 2.5px solid #d0e8f9;
+    display: inline-block;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.staff-qr-wrapper:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 40px rgba(88, 169, 224, 0.35);
+}
+
+.staff-canvas-target canvas {
+    display: block;
+    width: 250px !important;
+    height: 250px !important;
+    border-radius: 12px;
+}
+
+.qr-center-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+    border: 2px solid var(--primary-blue-soft);
+}
+
+.qr-badge-text {
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--primary-blue-dark);
+}
+
+.qr-target-url {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 6px 18px;
+    border-radius: var(--radius-full);
+    background: #f0f7ff;
+    border: 1px solid #bfdbfe;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   BANNER DE INSTRUCCIÓN AL CLIENTE
+   ========================================================================== */
+.scan-instructions-banner {
+    background: linear-gradient(135deg, #f0fdf4 0%, #e6f9ed 100%);
+    border: 1px solid #bbf7d0;
+    border-radius: 16px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+.scan-icon-pill {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #16a34a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+}
+
+.scan-banner-text strong {
+    font-size: 0.98rem;
+    color: #14532d;
+    display: block;
+}
+
+.scan-banner-text p {
+    font-size: 0.84rem;
+    color: #166534;
+    margin-top: 2px;
+    line-height: 1.35;
+}
+
+/* ==========================================================================
+   BOTONES DE HERRAMIENTAS PARA EL TRABAJADOR
+   ========================================================================== */
+.staff-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.staff-tool-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background: white;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.staff-tool-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.btn-tool-wa {
+    grid-column: span 2;
+    background: #25d366;
+    color: white;
+    border-color: #25d366;
+    font-size: 0.95rem;
+    padding: 14px 16px;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+}
+
+.btn-tool-wa:hover {
+    background: #20ba59;
+    box-shadow: 0 8px 22px rgba(37, 211, 102, 0.4);
+}
+
+.btn-tool-copy:hover {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-color: #93c5fd;
+}
+
+.btn-tool-download:hover {
+    background: #fdf2f8;
+    color: #be185d;
+    border-color: #fbcfe8;
+}
+
+.btn-tool-fullscreen:hover {
+    background: #f8fafc;
+    color: #0f172a;
+    border-color: #94a3b8;
+}
+
+/* Enlace a la tarjeta principal */
+.staff-card-footer {
+    border-top: 1px dashed rgba(88, 169, 224, 0.4);
+    padding-top: 16px;
+}
+
+.view-main-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-blue-dark);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.view-main-card-btn:hover {
+    color: #1e3a8a;
+    gap: 12px;
+}
+
+/* Modo Pantalla Completa Mejorada */
+body.is-fullscreen-mode {
+    background: #ffffff;
+}
+
+body.is-fullscreen-mode .staff-display-card {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+@media (max-width: 600px) {
+    .staff-display-card {
+        padding: 24px 18px 18px;
+        border-radius: 20px;
+    }
+
+    .staff-brand-title {
+        font-size: 1.8rem;
+    }
+
+    .staff-canvas-target canvas {
+        width: 210px !important;
+        height: 210px !important;
+    }
+
+    .staff-tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-tool-wa {
+        grid-column: span 1;
+    }
+}

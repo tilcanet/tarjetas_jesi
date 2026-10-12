@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eaf5fd"/>
+    </linearGradient>
+    <linearGradient id="blobGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#73bde9"/>
+      <stop offset="100%" stop-color="#58a9e0"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#58a9e0" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo app icono -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="111" fill="none" stroke="#73bde9" stroke-width="6" stroke-opacity="0.35"/>
+
+  <!-- Ondas decorativas esquinas -->
+  <path d="M-10 140 C50 140, 140 50, 140 -10 L-10 -10 Z" fill="#73bde9" opacity="0.85"/>
+  <path d="M-10 140 C50 140, 140 50, 140 -10" stroke="#ff7597" stroke-width="8" fill="none"/>
+
+  <path d="M372 522 C372 430, 430 372, 522 372 L522 522 Z" fill="#73bde9" opacity="0.85"/>
+  <path d="M372 522 C372 430, 430 372, 522 372" stroke="#ff7597" stroke-width="8" fill="none"/>
+
+  <!-- Ilustración Mascota Ovejita Mixturas Tilcara -->
+  <g transform="translate(116, 70) scale(1.4)" filter="url(#shadow)">
+    <!-- Patitas -->
+    <ellipse cx="88" cy="190" rx="10" ry="6" fill="#78bfe8"/>
+    <ellipse cx="112" cy="190" rx="10" ry="6" fill="#78bfe8"/>
+
+    <!-- Cuerpo esponjoso de lana -->
+    <path d="M70 65 C55 60, 40 75, 42 90 C30 95, 25 110, 32 125 C25 135, 28 152, 42 160 C48 175, 68 185, 85 180 C95 186, 110 186, 120 180 C135 185, 155 175, 160 160 C173 152, 175 135, 170 123 C178 110, 172 95, 160 90 C162 75, 148 60, 132 65 C122 55, 108 55, 100 58 C92 55, 78 55, 70 65 Z" 
+          stroke="#58a9e0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff"/>
+
+    <!-- Orejas -->
+    <path d="M68 68 C52 64, 45 74, 52 84 C60 84, 70 76, 73 73" stroke="#58a9e0" stroke-width="3.5" fill="#ffffff" stroke-linecap="round"/>
+    <path d="M132 68 C148 64, 155 74, 148 84 C140 84, 130 76, 127 73" stroke="#58a9e0" stroke-width="3.5" fill="#ffffff" stroke-linecap="round"/>
+
+    <!-- Cabeza -->
+    <path d="M78 72 C70 95, 76 120, 88 126 C96 130, 104 130, 112 126 C124 120, 130 95, 122 72 C115 62, 85 62, 78 72 Z" 
+          stroke="#58a9e0" stroke-width="3.8" fill="#ffffff"/>
+
+    <!-- Ojos -->
+    <ellipse cx="93" cy="88" rx="2.5" ry="4" fill="#3b8dc7"/>
+    <ellipse cx="107" cy="88" rx="2.5" ry="4" fill="#3b8dc7"/>
+
+    <!-- Sonrisa -->
+    <path d="M96 112 Q100 115 104 112" stroke="#58a9e0" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Rulo/Moño en la cabeza -->
+    <path d="M90 60 C86 52, 98 48, 100 55 C104 48, 115 52, 110 60 C116 64, 112 72, 104 69 C96 72, 90 65, 90 60 Z" 
+          stroke="#58a9e0" stroke-width="3.5" fill="#ffffff"/>
+  </g>
+
+  <!-- Texto de la App: Mixturas Tilcara -->
+  <text x="256" y="415" font-family="'Caveat', cursive, sans-serif" font-size="56" font-weight="bold" fill="#0f172a" text-anchor="middle">Mixturas</text>
+  <text x="256" y="465" font-family="'Caveat', cursive, sans-serif" font-size="44" font-weight="bold" fill="#ff7597" text-anchor="middle">Tilcara</text>
+</svg>

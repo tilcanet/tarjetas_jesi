@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixturas Tilcara | Pantalla para Trabajadores</title>
+    <meta name="description" content="Pantalla de atención de Mixturas Tilcara para mostrar y compartir la tarjeta digital con clientes.">
+    <meta name="theme-color" content="#58a9e0">
+
+    <!-- PWA & Acceso directo en Celular -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="trabajadores.css">
+</head>
+<body class="staff-page-body">
+    <!-- Fondo decorativo coherente con la marca -->
+    <div class="blob-bg blob-top-left"></div>
+    <div class="blob-bg blob-top-right"></div>
+    <div class="blob-bg blob-bottom-right"></div>
+    <div class="blob-bg blob-bottom-left"></div>
+
+    <header class="site-header staff-header">
+        <div class="container header-container">
+            <a href="index.html" class="back-link" title="Volver a la tarjeta principal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                <span>Ver Tarjeta Completa</span>
+            </a>
+            <div class="staff-badge">
+                <span class="staff-dot"></span>
+                <span>Modo Atención / Equipo</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content staff-main">
+        <div class="container staff-container">
+            
+            <!-- TARJETA PRINCIPAL DEL TRABAJADOR / MOSTRADOR -->
+            <section class="staff-display-card">
+                <div class="staff-card-header">
+                    <!-- Mascota Mixturas Tilcara -->
+                    <div class="staff-mascot">
+                        <svg class="sheep-svg" viewBox="0 0 200 210" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mixturas Tilcara">
+                            <ellipse cx="88" cy="190" rx="10" ry="6" fill="#78bfe8"/>
+                            <ellipse cx="112" cy="190" rx="10" ry="6" fill="#78bfe8"/>
+                            <path d="M70 65 C55 60, 40 75, 42 90 C30 95, 25 110, 32 125 C25 135, 28 152, 42 160 C48 175, 68 185, 85 180 C95 186, 110 186, 120 180 C135 185, 155 175, 160 160 C173 152, 175 135, 170 123 C178 110, 172 95, 160 90 C162 75, 148 60, 132 65 C122 55, 108 55, 100 58 C92 55, 78 55, 70 65 Z" stroke="#78bfe8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#ffffff"/>
+                            <path d="M48 105 Q58 115 50 125 Q45 135 55 145" stroke="#92cef0" stroke-width="2" stroke-linecap="round" fill="none"/>
+                            <path d="M152 105 Q142 115 150 125 Q155 135 145 145" stroke="#92cef0" stroke-width="2" stroke-linecap="round" fill="none"/>
+                            <path d="M68 68 C52 64, 45 74, 52 84 C60 84, 70 76, 73 73" stroke="#78bfe8" stroke-width="2.6" fill="#ffffff" stroke-linecap="round"/>
+                            <path d="M132 68 C148 64, 155 74, 148 84 C140 84, 130 76, 127 73" stroke="#78bfe8" stroke-width="2.6" fill="#ffffff" stroke-linecap="round"/>
+                            <path d="M78 72 C70 95, 76 120, 88 126 C96 130, 104 130, 112 126 C124 120, 130 95, 122 72 C115 62, 85 62, 78 72 Z" stroke="#78bfe8" stroke-width="2.8" fill="#ffffff"/>
+                            <ellipse cx="93" cy="88" rx="2" ry="3.5" fill="#78bfe8"/>
+                            <ellipse cx="107" cy="88" rx="2" ry="3.5" fill="#78bfe8"/>
+                            <path d="M96 112 Q100 115 104 112" stroke="#78bfe8" stroke-width="2" stroke-linecap="round" fill="none"/>
+                            <path d="M90 60 C86 52, 98 48, 100 55 C104 48, 115 52, 110 60 C116 64, 112 72, 104 69 C96 72, 90 65, 90 60 Z" stroke="#78bfe8" stroke-width="2.5" fill="#ffffff"/>
+                        </svg>
+                    </div>
+
+                    <div class="staff-title-group">
+                        <h1 class="staff-brand-title">Mixturas <span>Tilcara</span></h1>
+                        <p class="staff-brand-subtitle">Mostrá esta pantalla a tus clientes para escanear</p>
+                    </div>
+                </div>
+
+                <!-- CÓDIGO QR GIGANTE Y CENTRADO -->
+                <div class="staff-qr-box">
+                    <div class="staff-qr-wrapper" id="staffQrWrapper">
+                        <div id="staffQrCanvasHolder" class="staff-canvas-target"></div>
+                        <div class="qr-center-badge">
+                            <span class="qr-badge-text">MT</span>
+                        </div>
+                    </div>
+                    <div class="qr-target-url">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        <span>mixturas.tilcanet.com.ar</span>
+                    </div>
+                </div>
+
+                <!-- INSTRUCCIÓN RÁPIDA AL CLIENTE -->
+                <div class="scan-instructions-banner">
+                    <div class="scan-icon-pill">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    </div>
+                    <div class="scan-banner-text">
+                        <strong>¡Escaneá con tu celular!</strong>
+                        <p>Abrí la cámara para acceder a la tarjeta móvil, WhatsApp, ubicación y arreglos.</p>
+                    </div>
+                </div>
+
+                <!-- BOTONES DE ACCIÓN PARA EL TRABAJADOR -->
+                <div class="staff-tools-grid">
+                    <!-- 1. COMPARTIR LINK POR WHATSAPP AL CLIENTE -->
+                    <button id="btnShareWhatsApp" class="staff-tool-btn btn-tool-wa">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.58 20.15 9.14 19.76 7.89 19.02L7.59 18.84L4.47 19.66L5.3 16.62L5.1 16.31C4.29 15.01 3.86 13.48 3.86 11.91C3.86 7.4 7.53 3.73 12.05 3.73C14.24 3.73 16.29 4.58 17.84 6.14C19.39 7.69 20.24 9.74 20.24 11.92C20.23 16.44 16.57 20.15 12.05 20.15Z"/>
+                        </svg>
+                        <span>Enviar Enlace por WhatsApp</span>
+                    </button>
+
+                    <!-- 2. COPIAR ENLACE -->
+                    <button id="btnCopyPageUrl" class="staff-tool-btn btn-tool-copy">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <span id="copyUrlLabel">Copiar Enlace</span>
+                    </button>
+
+                    <!-- 3. DESCARGAR QR EN IMAGEN -->
+                    <button id="btnDownloadStaffQr" class="staff-tool-btn btn-tool-download">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <span>Descargar QR (PNG)</span>
+                    </button>
+
+                    <!-- 4. PANTALLA COMPLETA / BRILLO -->
+                    <button id="btnToggleFullscreen" class="staff-tool-btn btn-tool-fullscreen">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                        <span id="fullscreenLabel">Pantalla Completa</span>
+                    </button>
+                </div>
+
+                <!-- ENLACE DIRECTO A LA TARJETA PRINCIPAL -->
+                <div class="staff-card-footer">
+                    <a href="index.html" class="view-main-card-btn">
+                        <span>Abrir la Tarjeta Principal (Frontpage)</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- BOTÓN FLOTANTE: DESCARGAR ACCESO DIRECTO AL CELULAR -->
+    <button id="btnFloatingInstall" class="floating-install-btn" title="Descargar acceso directo en tu celular" aria-label="Descargar acceso directo en celular">
+        <div class="fab-phone-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                <path d="M12 6v6"></path>
+                <path d="m9 9 3 3 3-3"></path>
+            </svg>
+        </div>
+        <span class="fab-label">Instalar en Celular</span>
+        <span class="fab-pulse"></span>
+    </button>
+
+    <!-- MODAL DE INSTALACIÓN PWA -->
+    <div id="installModal" class="modal-backdrop" aria-hidden="true">
+        <div class="modal-dialog install-dialog">
+            <button id="btnCloseInstallModal" class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+            <div class="install-modal-header">
+                <div class="app-icon-preview">
+                    <img src="icon.svg" alt="Ícono Mixturas Tilcara" width="64" height="64">
+                </div>
+                <h3>Acceso Directo en tu Celular</h3>
+                <p>Instalá esta pantalla de mostrador para tenerla siempre lista en tu teléfono.</p>
+            </div>
+
+            <div class="install-modal-body">
+                <button id="btnNativeInstall" class="btn-cta full-width native-install-btn" style="display: none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>Instalar en Pantalla Principal</span>
+                </button>
+
+                <div id="iosInstructions" class="platform-guide">
+                    <div class="platform-title">
+                        <span class="plat-badge">iPhone / iPad (Safari)</span>
+                    </div>
+                    <ol class="guide-steps">
+                        <li>
+                            <span class="step-circle">1</span>
+                            <div>Tocá el botón <strong>Compartir</strong> en la barra de Safari (<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle;"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>).</div>
+                        </li>
+                        <li>
+                            <span class="step-circle">2</span>
+                            <div>Seleccioná <strong>"Agregar a pantalla de inicio"</strong>.</div>
+                        </li>
+                        <li>
+                            <span class="step-circle">3</span>
+                            <div>Tocá <strong>"Agregar"</strong> y listo.</div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div id="androidInstructions" class="platform-guide">
+                    <div class="platform-title">
+                        <span class="plat-badge">Android (Chrome)</span>
+                    </div>
+                    <ol class="guide-steps">
+                        <li>
+                            <span class="step-circle">1</span>
+                            <div>Tocá los <strong>tres puntos</strong> (<strong style="font-size: 1.2rem;">⋮</strong>) arriba a la derecha.</div>
+                        </li>
+                        <li>
+                            <span class="step-circle">2</span>
+                            <div>Seleccioná <strong>"Agregar a la pantalla principal"</strong> o <strong>"Instalar aplicación"</strong>.</div>
+                        </li>
+                        <li>
+                            <span class="step-circle">3</span>
+                            <div>Confirmá en <strong>"Instalar"</strong>.</div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button id="btnDismissInstall" class="btn-secondary full-width">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICACIÓN -->
+    <div id="toastNotification" class="toast" role="status" aria-live="polite"></div>
+
+    <footer class="site-footer staff-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <strong>Mixturas Tilcara</strong> &bull; Modo Mostrador &bull; Tilcara, Jujuy
+            </div>
+            <div class="footer-copy">
+                Redirección oficial: <strong>mixturas.tilcanet.com.ar</strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="qrcode.min.js"></script>
+    <script src="trabajadores.js"></script>
+</body>
+</html>

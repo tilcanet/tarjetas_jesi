@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Mixturas Tilcara//Tarjeta Digital//ES
+N:Tilcara;Mixturas;;;
+FN:Mixturas Tilcara
+ORG:Mixturas Tilcara - Costura y Tapicería
+TITLE:Arreglos de Costura en Gral. y Tapicería
+TEL;TYPE=CELL,VOICE,pref:+5493884355880
+TEL;TYPE=WORK:+543884355880
+ADR;TYPE=WORK;CHARSET=UTF-8:;;Calle 17 de Octubre 479;Tilcara;Jujuy;4622;Argentina
+LABEL;TYPE=WORK;CHARSET=UTF-8:Calle 17 de Octubre 479, Barrio Villa Las Rosas, Tilcara, Jujuy
+EMAIL:
+URL;TYPE=WhatsApp:https://wa.me/5493884355880
+URL;TYPE=Instagram:https://instagram.com/MixturasTilcara
+URL;TYPE=Facebook:https://facebook.com/MixturasTilcara
+NOTE;CHARSET=UTF-8:Servicios: Arreglos de costura en general y Tapicería. Tilcara, Jujuy.
+END:VCARD
