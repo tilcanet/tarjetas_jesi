@@ -300,17 +300,18 @@ body {
     backface-visibility: hidden;
 }
 
-/* Ondas celestes y rosadas esquinas (como la tarjeta física) */
+/* Ondas celestes y rosadas esquinas (reducidas para no invadir el logo) */
 .wave-blob {
     position: absolute;
     pointer-events: none;
+    z-index: 1;
 }
 
 .wave-tl {
-    top: -30px;
-    left: -30px;
-    width: 180px;
-    height: 180px;
+    top: -45px;
+    left: -45px;
+    width: 125px;
+    height: 125px;
     background: #73bde9;
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     border-bottom: 3.5px solid #ff7597;
@@ -319,10 +320,10 @@ body {
 }
 
 .wave-br {
-    bottom: -35px;
-    right: -35px;
-    width: 200px;
-    height: 190px;
+    bottom: -45px;
+    right: -45px;
+    width: 135px;
+    height: 135px;
     background: #73bde9;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     border-top: 3.5px solid #ff7597;
@@ -337,20 +338,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 16px 20px 10px;
 }
 
 .card-logo-wrapper {
-    width: 220px;
-    height: 235px;
+    flex: 1;
+    width: 100%;
+    max-width: 250px;
+    min-height: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 4px;
 }
 
 .card-logo-img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 220px;
+    width: auto;
+    height: auto;
     object-fit: contain;
     display: block;
 }
@@ -1404,9 +1412,26 @@ body {
         height: 26px;
     }
 
+    .wave-tl {
+        width: 85px;
+        height: 85px;
+        top: -30px;
+        left: -30px;
+    }
+
+    .wave-br {
+        width: 90px;
+        height: 90px;
+        bottom: -30px;
+        right: -30px;
+    }
+
     .card-logo-wrapper {
-        width: 180px;
-        height: 195px;
+        max-width: 190px;
+    }
+
+    .card-logo-img {
+        max-height: 180px;
     }
 
     .back-body {
@@ -1491,9 +1516,26 @@ body {
         height: 275px;
     }
 
+    .wave-tl {
+        width: 70px;
+        height: 70px;
+        top: -24px;
+        left: -24px;
+    }
+
+    .wave-br {
+        width: 75px;
+        height: 75px;
+        bottom: -24px;
+        right: -24px;
+    }
+
     .card-logo-wrapper {
-        width: 160px;
-        height: 175px;
+        max-width: 170px;
+    }
+
+    .card-logo-img {
+        max-height: 160px;
     }
 
     .back-body {
